@@ -51,6 +51,45 @@ window.addEventListener('scroll', () => {
         'rgba(15,15,35,0.98)' : 'rgba(15,15,35,0.95)';
 });
 
+// ========== HERO CAROUSEL ==========
+let currentSlide = 0;
+let autoSlideInterval;
+
+const slides = document.querySelectorAll('.carousel-slide');
+const dots = document.querySelectorAll('.dot');
+
+function goToSlide(index) {
+    // Remove active from current
+    slides[currentSlide].classList.remove('active');
+    dots[currentSlide].classList.remove('active');
+
+    // Set new index
+    currentSlide = (index + slides.length) % slides.length;
+
+    // Add active to new
+    slides[currentSlide].classList.add('active');
+    dots[currentSlide].classList.add('active');
+}
+
+function changeSlide(direction) {
+    goToSlide(currentSlide + direction);
+    resetAutoSlide(); // Reset timer on manual click
+}
+
+function startAutoSlide() {
+    autoSlideInterval = setInterval(() => {
+        goToSlide(currentSlide + 1);
+    }, 4000); // Change every 4 seconds
+}
+
+function resetAutoSlide() {
+    clearInterval(autoSlideInterval);
+    startAutoSlide();
+}
+
+// Start auto sliding on page load
+startAutoSlide();
+
 // Load events
 window.addEventListener('scroll', animateSkillBars);
 window.addEventListener('load', animateSkillBars);

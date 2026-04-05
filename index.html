@@ -26,25 +26,66 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
-   <section class="hero">
+<!-- Hero Section -->
+<section class="hero" id="home">
     <div class="hero-content centered-content">
-    <!-- content here -->
-    <h1>Game UI <br> Programmer</h1>
-    <h3>
-    I Specialize in Unity & Unreal Engine using C#, Blueprints & C++. 
-      Building UI systems that feel natural and perform well.
-    </h3>
-    <div class="hero-buttons">
-      <a href="#projects" class="btn-primary">View Projects</a>
-      <a href="#contact" class="btn-secondary">Hire Me</a>
+        <h1>Game UI <br> Programmer</h1>
+        <h3>
+            I Specialize in Unity & Unreal Engine using C#, Blueprints & C++.
+            Building UI systems that feel natural and perform well.
+        </h3>
+        <div class="hero-buttons">
+            <a href="#projects" class="btn-primary">View Projects</a>
+            <a href="#contact" class="btn-secondary">Hire Me</a>
+        </div>
+        <div class="hero-stats">
+            <div><span>4+</span> Game Projects</div>
+            <div><span>3+</span> Years Experience</div>
+        </div>
     </div>
-    <div class="hero-stats">
-      <div><span>4+</span> Game Projects</div>
-      <div><span>3+</span> Years Experience</div>
+
+    <!-- 🎠 IMAGE CAROUSEL -->
+    <div class="hero-carousel">
+        <button class="carousel-btn prev-btn" onclick="changeSlide(-1)">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+
+        <div class="carousel-track">
+            <!-- SLIDE 1 - Replace src with your image -->
+            <div class="carousel-slide active">
+                <img src="https://img.itch.zone/aW1hZ2UvMzQ3NDczMi8yMDczMTUxNC5wbmc=/original/3IbX2Y.png" alt="Project 1" />
+                <div class="slide-label">Corpse Hustle</div>
+            </div>
+
+            <!-- SLIDE 2 - Replace src with your image -->
+            <div class="carousel-slide">
+                <img src="https://img.itch.zone/aW1nLzIzNTM3MjEyLnBuZw==/347x500/nCijSG.png" alt="Project 2" />
+                <div class="slide-label">Point System Final</div>
+            </div>
+
+            <!-- SLIDE 3 - Replace src with your image -->
+            <div class="carousel-slide">
+                <img src="https://img.itch.zone/aW1nLzI0NDA1MTM0LnBuZw==/315x250%23c/H5HxJW.png" alt="Project 3" />
+                <div class="slide-label">Tempest Island</div>
+            </div>
+
+            <!-- ADD MORE SLIDES HERE - COPY THE ABOVE BLOCK -->
+
+        </div>
+
+        <button class="carousel-btn next-btn" onclick="changeSlide(1)">
+            <i class="fas fa-chevron-right"></i>
+        </button>
+
+        <!-- Dots indicator -->
+        <div class="carousel-dots">
+            <span class="dot active" onclick="goToSlide(0)"></span>
+            <span class="dot" onclick="goToSlide(1)"></span>
+            <span class="dot" onclick="goToSlide(2)"></span>
+            <!-- ADD MORE DOTS HERE WHEN ADDING SLIDES -->
+        </div>
     </div>
-    </div>
-   </section>
+</section>
 
     <!-- About Section -->
     <section id="about" class="about">

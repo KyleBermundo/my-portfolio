@@ -859,3 +859,8 @@ section {
         height: 220px;
     }
 }
+
+/* ========== ABOUT SIDEBAR - Language & Hobby Cards ========== */
+.about-sidebar {
+    display: flex;
+    flex-

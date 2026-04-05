@@ -860,7 +860,9 @@ section {
     }
 }
 
-/* ========== ABOUT SIDEBAR - Language & Hobby Cards ========== */
+/* ========== ABOUT SIDEBAR ========== */
 .about-sidebar {
     display: flex;
-    flex-
+    flex-direction: column;
+    gap: 1.5rem;
+}
